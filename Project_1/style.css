@@ -1,0 +1,123 @@
+    /* Set default margin, padding, and font family for all elements */
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    /* Set background image and size for banner section */
+    .banner{
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url("Background.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Set styling for navigation bar */
+    .navbar{
+        display: 84%; /* Set width of navbar */
+        margin: auto; /* Center the navbar horizontally */
+        padding: 35px , 0; /* Set top and bottom padding for navbar */
+        display: flex; /* Display the navbar items in a flex container */
+        align-items: center; /* Center the items vertically */
+        justify-content: space-between; /* Distribute the items horizontally */
+    }
+
+    /* Set styling for logo image */
+    .logo{
+        width:120px;
+        cursor: pointer;
+    }
+
+    /* Set styling for navigation bar links */
+    .navbar ul li{
+        list-style: none;
+        margin: 0 20px; /* Set left and right margin for navbar items */
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Set styling for navigation bar link text */
+    .navbar ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    /* Create an underline effect on hover for navigation bar links */
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #009688;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom:-10px;
+        transition: 0.5s;
+    }
+
+    /* Expand the underline effect on hover */
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+
+    /* Set styling for main content section */
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 50%; /* Center the content vertically */
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    /* Set styling for main heading */
+    .content h1{
+        font-size:70px ; /* Set font size for heading */
+        margin-top: 10px;
+    }
+
+    /* Set styling for main paragraph text */
+    .content p{
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+
+    /* Set styling for sign-in button */
+    button{
+        width: 200px;
+        padding:15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 35px;
+        font-weight: bold;
+        border: 2px solid #009688;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Create a sliding effect on hover for sign-in button */
+    span{
+        background: #009688;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0
+    }
+
+button:hover span{
+    width: 100%;
+    
+}
+button:hover{
+    border: none;
+}
